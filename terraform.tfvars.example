@@ -1,0 +1,38 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# terraform.tfvars is listed in .gitignore to avoid committing sensitive data.
+
+# AWS region to deploy resources in
+aws_region = "us-east-1"
+
+# EC2 instance type
+instance_type = "t3.micro"
+
+# (Optional) Specific AMI ID — leave empty to use the latest Amazon Linux 2 AMI
+# ami_id = "ami-0abcdef1234567890"
+
+# (Optional) Name of an existing EC2 key pair for SSH access
+# key_name = "my-key-pair"
+
+# Name tag for the EC2 instance
+instance_name = "nginx-server"
+
+# (Optional) VPC ID — leave empty to use the default VPC
+# vpc_id = "vpc-0123456789abcdef0"
+
+# (Optional) Subnet ID — leave empty to use a default subnet
+# subnet_id = "subnet-0123456789abcdef0"
+
+# CIDR blocks allowed to access nginx over HTTP
+allowed_http_cidr_blocks = ["0.0.0.0/0"]
+
+# CIDR blocks allowed to SSH into the instance (only relevant when key_name is set)
+# allowed_ssh_cidr_blocks = ["YOUR_IP_ADDRESS/32"]
+
+# Whether to assign a public IP address
+associate_public_ip_address = true
+
+# Additional tags
+tags = {
+  Environment = "dev"
+  Project     = "nginx-server"
+}
