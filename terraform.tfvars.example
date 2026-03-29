@@ -1,1 +1,4 @@
-
+aws_region        = "eu-central-1"
+availability_zone = "eu-central-1a"
+instance_type     = "t2.micro"
+allowed_ssh_ip    = "95.87.214.199/32"
